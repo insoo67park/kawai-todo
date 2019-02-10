@@ -6,9 +6,20 @@ import ToDo from "./ToDo";
 const { height, width } = Dimensions.get("window");
 
 export default class App extends React.Component {
-  state = {
-    newToDo: ""
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      newToDo: ""
+    };
   }
+
+  crontollNewToDo = (text) => {
+    this.setState({
+      newToDo: text
+    }); 
+  }
+  
   render() {
     const { newToDo } = this.state;
     return (
@@ -20,24 +31,18 @@ export default class App extends React.Component {
             style={styles.input} 
             placeholder={"New To Do"} 
             value={newToDo} 
-            onChangeText={this._crontollNewToDo} 
+            onChangeText={this.crontollNewToDo} 
             placeholderTextColor={"#999"}
             returnKeyType={"done"}
             autoCorrect={false}
           />
           <ScrollView contentContainerStyle={styles.ToDos}>
-            <ToDo />
+            <ToDo text={"Hello I'm a to do"}/>
           </ScrollView>
         </View>
       </View>
     );
   }
-}
-
-_crontollNewToDo = text => {
-  this.setState({
-    newToDo: text
-  });
 }
 
 const styles = StyleSheet.create({
