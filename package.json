@@ -7,9 +7,16 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@babel/core": "^7.2.2",
     "expo": "^32.0.0",
+    "expo-asset": "^2.0.0",
+    "expo-cli": "^2.10.0",
+    "expo-constants": "^2.0.1",
+    "expo-react-native-adapter": "^2.0.0",
+    "fbjs": "^1.0.0",
     "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz"
+    "react-native": "https://github.com/expo/react-native/archive/sdk-32.0.0.tar.gz",
+    "react-native-gesture-handler": "^1.0.15"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"
